@@ -266,7 +266,11 @@ navigator.clipboard.writeText(key).catch(()=>{});
 startRedirectTimer();
 
 }catch(e){
-
+    // Ipapakita nito sa screen ang eksaktong error para malaman natin kung bakit nag-fail
+    document.getElementById("key").innerText = "DEBUG ERROR: " + e.message;
+    console.error(e);
+}
+    
 document.getElementById("key").innerText="Server error. Please try again.";
 
 }

@@ -287,6 +287,40 @@ body {
 </div>
 
 <script>
+
+/* ======================
+PARAM CHECK
+====================== */
+
+let params = new URLSearchParams(window.location.search);
+let pass = params.get("pass");
+let step = params.get("step");
+
+if(pass !== "1" || step !== "gplinks"){
+location.replace("https://fluxhaxfreekey.onrender.com");
+}
+
+/* ======================
+REFRESH BLOCK
+====================== */
+
+if(performance.navigation.type === 1){
+location.replace("https://fluxhaxfreekey.onrender.com");
+}
+
+/* ======================
+REFERRER CHECK
+====================== */
+
+let ref = document.referrer.toLowerCase();
+
+if(
+!ref.includes("https://fluxhaxfreekey.onrender.com") &&
+!ref.includes("gplinks")
+){
+location.replace("https://fluxhaxfreekey.onrender.com");
+}
+    
 function getDeviceID() {
     let deviceId = localStorage.getItem("kaze_device_id");
     if (!deviceId) {
